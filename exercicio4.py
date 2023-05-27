@@ -1,11 +1,12 @@
-#Agora vamos formatar strings
+#Agora vamos brincar com as variáveis !!
 
-nome = "Murilo"
-idade = 17
-altura = 1.74
-peso = 53
-cor_de_olho = "castanho"
-tipo_de_fisico = "magro" 
+nome1 = "Murilo"
+nome2 = "Maria Clara"
+idade_nome1 = 17
+idade_nome2 = idade_nome1
 
-print (f"O meu nome é {nome} , tenho {idade} anos de idade , peso {peso} kg e tenho {altura} metros de altura")
-print (f"O meu olho é {cor_de_olho} e o meu físico é {tipo_de_fisico}")
+print ("Quem é o nome 1 ? ", nome1)
+print ("Quem é o mome 2 ? ", nome2)
+print ("Qual a idade de ", nome1 ," ? ", idade_nome1)
+print ("E qual a idade de ", nome2 ," ? ",idade_nome2)
+print (nome1 ," e ", nome2 ," tem a mesma idade ? ", idade_nome1 == idade_nome2)
