@@ -1,22 +1,20 @@
-types_of_people = 10    #Declarei a variável do tipo inteiro
-x = f"Aqueles são os {types_of_people} tipos de pessoas"    #Declarei uma variavel do tipo string com o format
+print ("Mary teve um pequeno cordeiro.")
+print ("A lã era branca como a {}.".format('neve'))
+print ("E em todo lugar que Mary queria.")
+print ("." * 10)    #Multipliquei a string "." vezes 10
 
-binary = "binário"   #declarei outra variavel do tipo inteiro
-do_not = "não"
-y = f"Aqueles que sabem {binary} e aqueles que {do_not} sabem"
+letra1 = "C"
+letra2 = "h"
+letra3 = "e"
+letra4 = letra3
+letra5 = "s"
+letra6 = letra3
+letra7 = "B"
+letra8 = "u"
+letra9 = "r"
+letra10 = "g"
+letra11 = letra3
+letra12 = letra9
 
-print (x)
-print (y)
-
-print (f"Eu disse : {x}")
-print (f"Eu também disse : '{y}'")
-
-hilarious = False
-joke_evaluation = "Aquela piada é muito engraçada ?! {}"
-
-print (joke_evaluation.format(hilarious))
-
-w = "Isso é o lado esquerdo de..."
-e = "uma string com um lado direito."
-
-print (w + e)
+print (letra1 + letra2 + letra3 + letra4 + letra5 + letra6 , end=' ')   #Esse eu só consigo colocar um espaço quando uso o "end" , massa 
+print (letra7 + letra8 + letra9 + letra10 + letra11 + letra12)
