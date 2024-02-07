@@ -1,34 +1,25 @@
-def main(): #A função existe para ser repetida.
-    
-    super_poderes = ['Invisibilidade', 'Manipulação de Eletricidade', 'Controle do Tempo']
+from random import randint
 
-    print("Seja bem-vindo(a) ao código de você cria o seu poder e coloca em uma lista!! Aqui estão os poderes disponíveis:\n\n", super_poderes)
-    escolha = input("\nVocê quer criar um poder novo? Sim ou Não?\n>")
+cores = ['Azul', 'Branco', 'Preto', 'Amarelo', 'Rosa', 'Verde']
+modelos = ['Sedan', 'Hot-Hatch', 'Jipe', 'Caminhonte', 'Esportivo']
+marchas = [4, 5, 6, 7, 8]
 
-    #Essa função é a repetição, pois ela chama a função main() causando um looping.
+print("Bem-vindo(a) ao criador de carros aleatórios, aqui temos cores, modelos e quantidade de marchas para vocẽ montar o seu carro:\n")
+for color in range(0, len(cores)):
+    print("Cor: ", cores[color])
 
-    def rep():
-        novamente = input("\nVocê deseja criar outro poder? Sim ou Não?\n>")
+print("\n")
 
-        if novamente == "Sim" or "sim" or "s":
-            main()
-            super_poderes.append()
+for model in range(0, len(modelos)):
+    print("Modelo: ", modelos[model])
 
-        elif novamente == "Não" or "não" or "nao" or "n":
-            print("Ok")
+print("\n")
 
-    #Esse if é o que ativa a repetição.
+for gear in range(0, len(marchas)):
+    print("Marchas: ", marchas[gear])
 
-    if escolha == "Sim" or "sim" or "s":
+rand_one = randint(0, 5)
+rand_two = randint(0, 5)
+rand_three = randint(0, 6)
 
-        nome_poder = input("\nDigite o nome do seu poder:\n>")
-        super_poderes.append(nome_poder)
-
-        print(super_poderes)
-        rep()
-
-    elif escolha == "Não" or "não" or "nao" or "n":
-        print("Ok, volte sempre.")
-
-    return
-main()
+print(f"Agora vamos juntas essas caracteristicas e montar um carro bem aleatório:\n O carro tem cor: {cores[rand_one]}.\n É de modelo: {modelos[rand_two]}.\n E tem {marchas[rand_three]} marchas.")
