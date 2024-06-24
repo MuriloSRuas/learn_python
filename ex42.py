@@ -10,6 +10,7 @@ class Human(Creature):
         super(Creature, self).__init__(species)
         self.life = life
         self.damage = damage
+        #This code doesn't work, error: TypeError: __init__() missing 3 required positional arguments: 'species', 'life', and 'damage'
         
     def summary(self):
         return f"Specie: {Human.species}, life: {Human.life} and {Human.damage}"
