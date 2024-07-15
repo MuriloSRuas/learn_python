@@ -21,6 +21,18 @@ class Brawler(object):
 
         print("Here is the informations:\n\n{}".format(basic_attack))
         return basic_attack
+    
+    def set_Super(self):
+        name = input("What's the super name?\n\n>")
+        damage = int(input(f"What's the damage of {name}?\n\n>"))
+        
+        brawler_super = {
+            "Name" : name,
+            "Damage" : damage
+        }
+
+        print("Here is the informations:\n\n{}".format(brawler_super))
+        return brawler_super
 
 Chester = Brawler("Chester", 7000, 1200, "Yes")
 Chester.set_BasicAttack()
