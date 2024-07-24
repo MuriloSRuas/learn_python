@@ -50,8 +50,8 @@ class Player(Creature):
         pass
 
 class Dice(object):
-    def roll():
-        num = randint(1, 11)
+    def roll(a, b):
+        num = randint(a, b)
         return num
     
 class Round():
