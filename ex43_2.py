@@ -3,23 +3,37 @@ from random import randint
 #Classes
 
 class Creature(object):
+    
+    #Define the basic attributes of any Creature.
+
     def __init__(self, name : str, life : int, damage : int):
+
+        #Any Creature has a name, life and damage.
+
         self.name = name
         self.life = life
         self.damage = damage
 
 class Dragon(Creature):
+
+    #Define a Dragon, that is a Creature.
+
     def __init__(self):
+
+        #A Dragon is a Creature, then it has a name, life and damage too.
         name = "Dragon"
         life = 30
         damage = 7
         super().__init__(name, life, damage)
 
+    #The Dragon 
+
     def attack(self, Player):
+        
         hit = Dragon.damage + Dice.roll()
         Player.life = Player.life - hit
         return f"Damage: {hit}\n\nPlayer's life: {Player.life}"
-
+    
     def dodge(self):
         
         dodge_rate = Dice()
@@ -36,7 +50,11 @@ class Dragon(Creature):
             print("Oh!! It dodged")
 
 class Player(Creature):
+
+    #Player is a Creature too, but the difference is the shield attribute. Only the Player has a shield.
+
     def __init__(self):
+        
         life = 20
         damage = 5
         name = "Murilo"
@@ -46,17 +64,23 @@ class Player(Creature):
 
         self.shield = shield
 
+    #The Player can attack, dodge and protect himself. 
+
     def attack(self, Dragon):
+        
         hit = self.damage + Dice.roll()
         Dragon.life = Dragon.life - hit
         return f"Damage: {hit} / Dragon's life: {Dragon.life}"
 
     def dodge(self, dice_roll, dragon_attack):
+        
         if dice_roll >= dragon_attack:
+            
             dodge = "Nice, you dodged!!"
             return dodge
 
         elif dice_roll < dragon_attack():
+            
             dodge = "Ouch, you didn't dodged..."
             Player.life = (Player.life + Player.shield) - dragon_attack
             return dodge
@@ -65,7 +89,9 @@ class Player(Creature):
         pass
 
 class Dice(object):
+    
     def roll(a, b):
+        
         num = randint(a, b)
         return num
     
@@ -79,7 +105,6 @@ class Round(object):
 
         round = 1   #The Round always begins at 1.
 
-    def start(self):
         while round:
             
             print(f"{a.name}\n\nLife: {a.life}\nShield: {a.shield}")
