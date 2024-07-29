@@ -69,13 +69,20 @@ class Dice(object):
         num = randint(a, b)
         return num
     
-class Round():
-    round = 1
+class Round(object):
 
-    def __init__(self):
-        self.Player = Player()
+    #It's the class Round, it init the round battles.
+
+    def start(z, a : Player, b : Dragon):
+
+        #Start a Round: a Vs b
+
+        round = 1   #The Round always begins at 1.
 
     def start(self):
         while round:
-            print(f"Player\n\nLife: {Player.life}\nShield: {Player.shield}")
+            
+            print(f"{a.name}\n\nLife: {a.life}\nShield: {a.shield}")
+            print(f"\n{b.name}\n\nLife: {b.life}")
+            round += 1
             break
