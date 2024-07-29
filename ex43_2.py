@@ -86,3 +86,29 @@ class Round(object):
             print(f"\n{b.name}\n\nLife: {b.life}")
             round += 1
             break
+
+name = None
+
+print(f"Hello Player!!\n\nYou are welcome at this RPG created by Murilo Ruas, where you are a knight that fights agaist a scary dragon.\n\nFor we begin, firstly, what's your name?")
+
+name = input(">")
+
+print("\tCool!! So you are {}, aren't you?\n\nSo {}, I'll tell you a knight's story...".format(name, name))
+print("\tA knight was on a deadly mission to kill a dragon that has destroyed the city. King Rodolfo has sent him out with no hope of victory, because who would really believe that a man could defeat a dragon? What's more, all the “strongest warriors” in the kingdom didn't accept the mission, because they thought it was impossible to complete such a ridiculous mission. They said that because they were afraid. But he was different, he accepted the deadly mission without a second thought, now there's no turning back. When he left the village with his horse and his weapons, the villagers called him \"crazy\"")
+print("\tOn the way, he hears a roar from afar and smoke rising from the trees. He goes there and finds nothing but some burnt trees and the ground. He was about to leave, but out of nowhere he felt an absurd pressure coming from behind him, it was the dragon that seemed to be about 5 meters tall on 4 legs; and with a length of about 8 meters, it stared him in the eye ready to kill him. He froze and found himself in a dilemma: Run or Fight. What do you think he did?\n\nType 1 for Run or 2 for Fight:")
+
+dilemma = int(input(">"))
+
+if dilemma is 1: 
+    #if dilemma == 1
+    print("Yes, he runs. But his horse wasn't fast enough, because the dragon flies. The dragon breathes fire, what he did?\n\nType 1 for Give Up or 2 for Stay fighting:\n\n")
+
+    choice = int(input(">"))
+
+    if choice == 1:
+        PxD = Round()
+        PxD.start()
+
+elif dilemma is 2:
+    #if dilemma == 2
+    print("He fightes agaist the dragon")
