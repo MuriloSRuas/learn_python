@@ -20,6 +20,21 @@ class Dragon(Creature):
         Player.life = Player.life - hit
         return f"Damage: {hit}\n\nPlayer's life: {Player.life}"
 
+    def dodge(self):
+        
+        dodge_rate = Dice()
+        result = dodge_rate.roll(1, 101)
+
+        if result < 50:
+            
+            print("Yeah!! It takes the damage!!")
+            #It takes damage.
+
+        elif result >= 50:
+            
+            #It dodges of your attack.
+            print("Oh!! It dodged")
+
 class Player(Creature):
     def __init__(self):
         life = 20
