@@ -57,7 +57,7 @@ class Player(Creature):
         
         life = 20
         damage = 5
-        name = "Murilo"
+        name = "Teichós"
         shield = 5
 
         super().__init__(name, life, damage)
@@ -107,16 +107,33 @@ class Round(object):
 
         while round:
             
-            print(f"{a.name}\n\nLife: {a.life}\nShield: {a.shield}")
-            print(f"\n{b.name}\n\nLife: {b.life}")
-            round += 1
-            break
+            print("**Round {}**\n".format(round))
+            print(f"""
+    {a.name}
 
+    Life: {a.life}
+    Shield: {a.shield}
+                """)
+            print(f"""
+    {b.name}
+    
+    Life: {b.life}
+                """)
+            
+            round += 1
+            
+            if round == 10:
+                break
+
+fight = Round()
+player = Player()
+dragon = Dragon()
 name = None
 
 print(f"Hello Player!!\n\nYou are welcome at this RPG created by Murilo Ruas, where you are a knight that fights agaist a scary dragon.\n\nFor we begin, firstly, what's your name?")
 
 name = input(">")
+player.name = name
 
 print("\tCool!! So you are {}, aren't you?\n\nSo {}, I'll tell you a knight's story...".format(name, name))
 print("\tA knight was on a deadly mission to kill a dragon that has destroyed the city. King Rodolfo has sent him out with no hope of victory, because who would really believe that a man could defeat a dragon? What's more, all the “strongest warriors” in the kingdom didn't accept the mission, because they thought it was impossible to complete such a ridiculous mission. They said that because they were afraid. But he was different, he accepted the deadly mission without a second thought, now there's no turning back. When he left the village with his horse and his weapons, the villagers called him \"crazy\"")
@@ -131,8 +148,7 @@ if dilemma is 1:
     choice = int(input(">"))
 
     if choice == 1:
-        PxD = Round()
-        PxD.start()
+        fight.start(player, dragon)
 
 elif dilemma is 2:
     #if dilemma == 2
